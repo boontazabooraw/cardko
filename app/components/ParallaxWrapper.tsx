@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Parallax from "parallax-js";
 import { useEffect, useRef } from "react";
 
@@ -15,7 +14,8 @@ const ParallaxWrapper = ({ children }: ParallaxWrapperProps) => {
     if (!sceneRef.current) return;
 
     const parallaxInstance = new Parallax(sceneRef.current, {
-      relativeInput: true, // example option
+      relativeInput: true,
+      gyroscope: true // added
     });
 
     return () => {

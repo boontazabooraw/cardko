@@ -9,10 +9,8 @@ import { SiBattledotnet, SiRoblox, SiEpicgames } from "react-icons/si";
 const MainCard = () => {
   return (
     <div
-      className="h-20 w-100 p-15 bg-neutral-800/20 rounded-lg flex flex-col justify-center items-center gap-2
-    drop-shadow-sm hover:bg-neutral-800/50 transition-all duration-500 ease-in
-    "
-    >
+      className="h-20 w-100 p-15  rounded-lg flex flex-col justify-center items-center gap-2
+    drop-shadow-sm transition-all duration-500 ease-in">
       <div className="flex flex-row gap-5">
         <Tippy
           content="buntasaburo"
