@@ -6,10 +6,10 @@ import "tippy.js/dist/tippy.css"; // optional
 
 import { BsDiscord, BsSteam } from "react-icons/bs";
 import { SiBattledotnet, SiRoblox, SiEpicgames } from "react-icons/si";
-import { toast } from "react-toastify";
+import { Id, toast } from "react-toastify";
 
 const MainCard = () => {
-  const toastId = React.useRef<number | null>(null);
+  const toastId = React.useRef<Id | null>(null);
 
   const copied = (un: string) => {
     navigator.clipboard.writeText(un);
