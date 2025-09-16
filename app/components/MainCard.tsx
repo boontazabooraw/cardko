@@ -23,7 +23,7 @@ const MainCard = () => {
 
   return (
     <div
-      className="h-20 w-100 p-15  rounded-lg flex flex-col justify-center items-center gap-2
+      className="relative h-20 w-100 p-15 rounded-lg flex flex-col justify-center items-center gap-2
     drop-shadow-sm transition-all duration-500 ease-in"
     >
       <div className="flex flex-row gap-5">
@@ -67,7 +67,7 @@ const MainCard = () => {
           <button onClick={() => copied("MadBytez")}>
             <SiEpicgames
               size={50}
-              className="drop-shadow-sm hover:opacity-70 transition-all duration-200 ease-in"
+              className="drop-shadow-sm hover:opacity-70 transition-all duration-200 ease-in cursor-pointer"
             />
           </button>
         </Tippy>
@@ -82,7 +82,7 @@ const MainCard = () => {
           <button onClick={() => copied("PawisangBilat")}>
             <SiRoblox
               size={50}
-              className="drop-shadow-sm hover:opacity-70 transition-all duration-200 ease-in"
+              className="drop-shadow-sm hover:opacity-70 transition-all duration-200 ease-in cursor-pointer"
             />
           </button>
         </Tippy>
@@ -97,13 +97,13 @@ const MainCard = () => {
           <button onClick={() => copied("DEPRESS1ON#1393")}>
             <SiBattledotnet
               size={50}
-              className="drop-shadow-sm hover:opacity-70 transition-all duration-200 ease-in"
+              className="drop-shadow-sm hover:opacity-70 transition-all duration-200 ease-in cursor-pointer"
             />
           </button>
         </Tippy>
       </div>
-      <div>
-        <h1 className="font-bold">beesechurger / buntasaburo</h1>
+      <div className="">
+        <h1 className="text-center font-bold tracking-[4px] text-nowrap">beesechurger / buntasaburo</h1>
       </div>
     </div>
   );
