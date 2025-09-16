@@ -14,7 +14,7 @@ const MainCard = () => {
   const copied = (un: string) => {
     navigator.clipboard.writeText(un);
 
-    if (!toast.isActive(toastId.current)) {
+    if (toastId.current === null || !toast.isActive(toastId.current)) {
       toastId.current = toast("Username copied!", {
         className: "toastAll !w-40 !text-[12px] !text-center p-0 !bg-black/50",
       });
