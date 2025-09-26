@@ -7,6 +7,7 @@ import "tippy.js/dist/tippy.css"; // optional
 import { BsDiscord, BsSteam } from "react-icons/bs";
 import { SiBattledotnet, SiRoblox, SiEpicgames } from "react-icons/si";
 import { Id, toast } from "react-toastify";
+import AudioControls from "./AudioControls";
 
 const MainCard = () => {
   const toastId = React.useRef<Id | null>(null);
@@ -34,7 +35,10 @@ const MainCard = () => {
           offset={[140, -250]}
           className="font-bold text-[20rem]"
         >
-          <a href="https://discordapp.com/users/859743349740929034" rel="noopener noreferrer">
+          <a
+            href="https://discordapp.com/users/859743349740929034"
+            rel="noopener noreferrer"
+          >
             <BsDiscord
               size={50}
               className="drop-shadow-sm hover:opacity-70 transition-all duration-200 ease-in"
@@ -49,7 +53,10 @@ const MainCard = () => {
           offset={[75, -250]}
           className="font-bold text-[20rem]"
         >
-          <a href="https://steamcommunity.com/id/allyouneedtodoisstickittotheman/" rel="noopener noreferrer">
+          <a
+            href="https://steamcommunity.com/id/allyouneedtodoisstickittotheman/"
+            rel="noopener noreferrer"
+          >
             <BsSteam
               size={50}
               className="drop-shadow-sm hover:opacity-70 transition-all duration-200 ease-in"
@@ -103,8 +110,11 @@ const MainCard = () => {
         </Tippy>
       </div>
       <div className="">
-        <h1 className="text-center font-bold tracking-[4px] text-nowrap">beesechurger / buntasaburo</h1>
+        <h1 className="text-center font-bold tracking-[4px] text-nowrap">
+          beesechurger / buntasaburo
+        </h1>
       </div>
+      <AudioControls />
     </div>
   );
 };
