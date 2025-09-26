@@ -13,7 +13,7 @@ const AudioControls = () => {
     useAudioPlayer();
 
   return (
-    <div className="flex flex-row justify-center items-center gap-10 opacity-80">
+    <div className="flex flex-row items-center gap-10 opacity-80">
       <button
         onClick={prevTrack}
         className={`hover:opacity-80 transition-opacity duration-300 ease-in-out 
