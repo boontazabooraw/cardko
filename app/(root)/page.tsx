@@ -13,9 +13,10 @@ export default function Home() {
               <Image
                 src="/imgs/DSCF0121.JPG"
                 alt="preview"
-                layout="fill"
-                objectFit="cover"
+                priority
+                fill
                 quality={100}
+                style={{ objectFit: "cover" }}
               />
             </div>
           </div>
