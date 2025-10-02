@@ -16,8 +16,8 @@ const AudioControls = () => {
     <div className="flex flex-row items-center gap-10 opacity-80">
       <button
         onClick={prevTrack}
-        className={`hover:opacity-80 transition-opacity duration-300 ease-in-out 
-            ${isPlaying ? "" : "opacity-0"}`}
+        className={`transition-opacity duration-300 ease-in-out 
+            ${isPlaying ? "hover:opacity-80 visible" : "opacity-0 invisible"}`}
       >
         <TbPlayerSkipBack size={30} />
       </button>
@@ -41,8 +41,8 @@ const AudioControls = () => {
       {/* <button onClick={stop}>⏹️ Stop</button> */}
       <button
         onClick={nextTrack}
-        className={`hover:opacity-80 transition-opacity duration-300 ease-in-out 
-            ${isPlaying ? "" : "opacity-0"}`}
+        className={`transition-opacity duration-300 ease-in-out 
+            ${isPlaying ? "hover:opacity-80 visible" : "opacity-0 invisible"}`}
       >
         <TbPlayerSkipForward size={30} />
       </button>
