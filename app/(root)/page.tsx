@@ -1,7 +1,9 @@
+"use client";
 import ParallaxWrapper from "../components/ParallaxWrapper";
 import MainCard from "../components/MainCard";
 
 import Image from "next/image";
+import ParticlesWrapper from "../components/ParticlesWrapper";
 
 export default function Home() {
   return (
@@ -18,14 +20,12 @@ export default function Home() {
                 quality={100}
                 style={{ objectFit: "cover" }}
               />
+              <ParticlesWrapper />
             </div>
           </div>
         </ParallaxWrapper>
       </div>
-      <div
-        className="h-[100%] w-[100%] flex items-center justify-center z-10
-      "
-      >
+      <div className="h-[100%] w-[100%] flex items-center justify-center z-10">
         <ParallaxWrapper>
           <div data-depth={0.2} className="pointer-events-auto">
             <MainCard />
