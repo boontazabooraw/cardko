@@ -14,7 +14,7 @@ const ParticlesWrapper = () => {
     >
       <Particles
         particleColors={["#c48c87", "#4d2c29"]}
-        particleCount={1000}
+        particleCount={200}
         particleSpread={10}
         speed={2}
         particleBaseSize={100}
