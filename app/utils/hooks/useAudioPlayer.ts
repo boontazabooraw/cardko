@@ -17,6 +17,7 @@ export const useAudioPlayer = () => {
       src: [tracks[trackIndex].src],
       html5: true,
       volume: 0.2,
+      preload: true,
       onend: () => {
         setShouldPlay(true); //Autoplay next track when current is finished
         setTrackIndex((prev) => (prev + 1) % tracks.length);
