@@ -7,10 +7,14 @@ import {
   TbPlayerSkipForward,
 } from "react-icons/tb";
 import { useAudioPlayer } from "../utils/hooks/useAudioPlayer";
+import { createContext } from "react";
+import { useAudioPlayerContext } from "../utils/context/AudioPlayerProvider";
+
 
 const AudioControls = () => {
-  const { track, play, pause, stop, nextTrack, prevTrack, isPlaying } =
-    useAudioPlayer();
+  const { track, play, pause, stop, nextTrack, prevTrack } = useAudioPlayer();
+
+  const { isPlaying, togglePlay } = useAudioPlayerContext();
 
   return (
     <div className="flex flex-row items-center gap-10 opacity-80">
@@ -24,14 +28,20 @@ const AudioControls = () => {
 
       {isPlaying ? (
         <button
-          onClick={pause}
+          onClick={() => {
+            pause();
+            togglePlay();
+          }}
           className="hover:opacity-80 transition-opacity duration-300 ease-in-out"
         >
           <TbPlayerPause size={30} />
         </button>
       ) : (
         <button
-          onClick={play}
+          onClick={() => {
+            play();
+            togglePlay();
+          }}
           className="hover:opacity-80 transition-opacity duration-300 ease-in-out"
         >
           <TbPlayerPlay size={30} />

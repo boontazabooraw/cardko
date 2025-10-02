@@ -1,4 +1,4 @@
-"use client";
+
 import ParallaxWrapper from "../components/ParallaxWrapper";
 import MainCard from "../components/MainCard";
 

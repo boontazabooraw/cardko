@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Slide, ToastContainer } from "react-toastify";
+import { AudioPlayerProvider } from "./utils/context/AudioPlayerProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,23 +29,23 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children} 
-        <ToastContainer
-          position="bottom-center"
-          autoClose={1000}
-          hideProgressBar
-          limit={1}
-          newestOnTop={false}
-          closeOnClick={true}
-          rtl={false}
-          pauseOnFocusLoss={false}
-          draggable
-          pauseOnHover
-          theme="dark"
-          transition={Slide}
-          
-        />
-        
+        <AudioPlayerProvider>
+          {children}
+          <ToastContainer
+            position="bottom-center"
+            autoClose={1000}
+            hideProgressBar
+            limit={1}
+            newestOnTop={false}
+            closeOnClick={true}
+            rtl={false}
+            pauseOnFocusLoss={false}
+            draggable
+            pauseOnHover
+            theme="dark"
+            transition={Slide}
+          />
+        </AudioPlayerProvider>
       </body>
     </html>
   );

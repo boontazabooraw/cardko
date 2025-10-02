@@ -3,12 +3,15 @@
 import Parallax from "parallax-js";
 import { useEffect, useRef } from "react";
 
+import { useAudioPlayerContext } from "../utils/context/AudioPlayerProvider";
+
 interface ParallaxWrapperProps {
   children: React.ReactNode;
 }
 
 const ParallaxWrapper = ({ children }: ParallaxWrapperProps) => {
   const sceneRef = useRef<HTMLDivElement>(null);
+  const { isPlaying } = useAudioPlayerContext();
 
   useEffect(() => {
     if (!sceneRef.current) return;
@@ -24,9 +27,10 @@ const ParallaxWrapper = ({ children }: ParallaxWrapperProps) => {
   }, []);
 
   return (
-    <div ref={sceneRef}>{children}</div>
+    <div className={`${isPlaying ? "brightness-85" : "brightness-100"} transition-all duration-800`} 
+    ref={sceneRef}>{children}</div>
 
-    // <div
+    // <div DON'T MIND ME LMAO
     //   globalFactorX={0.1}
     //   globalFactorY={0.1}
     //   className="bg-[url(/imgs/DSCF0121.JPG)] blur-[2px] brightness-80 bg-center bg-cover bg-no-repeat w-screen h-screen"

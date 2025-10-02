@@ -2,6 +2,7 @@ import { Howl } from "howler";
 import { useEffect, useRef, useState } from "react";
 import { tracks } from "../tracks";
 
+
 export const useAudioPlayer = () => {
   const [trackIndex, setTrackIndex] = useState(0);
   const [shouldPlay, setShouldPlay] = useState(false);
